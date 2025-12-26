@@ -1,14 +1,11 @@
 // db.js
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb://127.0.0.1:27017/marketplace';
+const mongoURI = 'mongodb://127.0.0.1:27017/plughub';
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(mongoURI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(mongoURI);
     console.log('MongoDB connected');
   } catch (err) {
     console.error('MongoDB connection error:', err);
